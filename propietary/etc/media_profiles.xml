@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 <!DOCTYPE MediaSettings [
-  <!ELEMENT MediaSettings (CamcorderProfiles,
+<!ELEMENT MediaSettings (CamcorderProfiles,
                          EncoderOutputFileFormat+,
                          VideoEncoderCap+,
                          AudioEncoderCap+,
@@ -76,73 +76,10 @@
      on an android-powered device.
 -->
 <MediaSettings>
-  <!-- Each camcorder profile defines a set of predefined configuration parameters -->
-  <!-- Back Camera -->
-  <CamcorderProfiles cameraId="0">
+    <!-- Each camcorder profile defines a set of predefined configuration parameters -->
+    <CamcorderProfiles>
 
-    <EncoderProfile quality="low" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-             bitRate="1000000"
-             width="640"
-             height="480"
-             frameRate="30" />
-
-      <Audio codec="aac"
-             bitRate="12200"
-             sampleRate="8000"
-             channels="1" />
-    </EncoderProfile>
-
-    <EncoderProfile quality="high" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-             bitRate="3000000"
-             width="1280"
-             height="720"
-             frameRate="15" />
-
-      <Audio codec="aac"
-             bitRate="96000"
-             sampleRate="44100"
-             channels="1" />
-    </EncoderProfile>
-    
-    <EncoderProfile quality="timelapselow" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-             bitRate="1000000"
-             width="640"
-             height="480"
-             frameRate="30" />
-
-      <Audio codec="aac"
-             bitRate="12200"
-             sampleRate="8000"
-             channels="1" />
-    </EncoderProfile>
-
-    <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-             bitRate="3000000"
-             width="1280"
-             height="720"
-             frameRate="15" />
-
-      <Audio codec="aac"
-             bitRate="96000"
-             sampleRate="44100"
-             channels="1" />
-    </EncoderProfile>
-    
-    <ImageEncoding quality="90" />
-    <ImageEncoding quality="80" />
-    <ImageEncoding quality="70" />
-    <ImageDecoding memCap="20000000" />
-
-  </CamcorderProfiles>
-
-  <!-- Front Camera -->
-  <CamcorderProfiles cameraId="1">
-
-       <EncoderProfile quality="high" fileFormat="mp4" duration="60">
+        <EncoderProfile quality="high" fileFormat="mp4" duration="60">
             <Video codec="h264"
                    bitRate="1000000"
                    width="640"
@@ -168,46 +105,19 @@
                    channels="1" />
 
         </EncoderProfile>
-        
-        <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="60">
-            <Video codec="h264"
-                   bitRate="1000000"
-                   width="640"
-                   height="480"
-                   frameRate="30" />
 
-            <Audio codec="aac"
-                   bitRate="12200"
-                   sampleRate="44100"
-                   channels="1" />
-        </EncoderProfile>
-
-        <EncoderProfile quality="timelapselow" fileFormat="mp4" duration="30">
-            <Video codec="h264"
-                   bitRate="300000"
-                   width="320"
-                   height="240"
-                   frameRate="30" />
-
-            <Audio codec="aac"
-                   bitRate="12200"
-                   sampleRate="8000"
-                   channels="1" />
-
-        </EncoderProfile>
-
-    <ImageEncoding quality="90" />
-    <ImageEncoding quality="80" />
-    <ImageEncoding quality="70" />
-    <ImageDecoding memCap="20000000" />
+        <ImageEncoding quality="90" />
+        <ImageEncoding quality="80" />
+        <ImageEncoding quality="70" />
+        <ImageDecoding memCap="20000000" />
 
         <Camera previewFrameRate="0" />
 
     </CamcorderProfiles>
 
-  <EncoderOutputFileFormat name="mp4" />
+    <EncoderOutputFileFormat name="mp4" />
 
-  <!--
+    <!--
          If a codec is not enabled, it is invisible to the applications
          In other words, the applications won't be able to use the codec
          or query the capabilities of the codec at all if it is disabled
